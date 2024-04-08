@@ -13,12 +13,13 @@
 
 body {
   margin: 0;
+  padding: 0;
   font-family: PT Mono, sans-serif;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  max-height: 100vh;
   background: rgba(0, 0, 0, 0.5);
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='%23161616' fill-opacity='0.1'%3E%3Cpath fill-rule='evenodd' d='M11 0l5 20H6l5-20zm42 31a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM0 72h40v4H0v-4zm0-8h31v4H0v-4zm20-16h20v4H20v-4zM0 56h40v4H0v-4zm63-25a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm10 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM53 41a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm10 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm10 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-30 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-28-8a5 5 0 0 0-10 0h10zm10 0a5 5 0 0 1-10 0h10zM56 5a5 5 0 0 0-10 0h10zm10 0a5 5 0 0 1-10 0h10zm-3 46a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm10 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM21 0l5 20H16l5-20zm43 64v-4h-4v4h-4v4h4v4h4v-4h4v-4h-4zM36 13h4v4h-4v-4zm4 4h4v4h-4v-4zm-4 4h4v4h-4v-4zm8-8h4v4h-4v-4z'/%3E%3C/g%3E%3C/svg%3E");
 }
@@ -26,14 +27,14 @@ body {
 .game-container {
   border: 1px solid black;
   box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.5);
-  max-width: 530px;
+  max-width: 90vh;
   width: 100%;
-  max-height: 750px;
-  height: 100vh;
+  max-height: 100vh;
+  height: 100%;
   position: relative;
   background: rgba(255, 255, 255, 0.5);
   user-select: none;
-  margin: 20px;
+  padding: 20px;
   overflow: hidden;
 }
 
@@ -68,7 +69,7 @@ input[type="radio"] {
 
 .selection-container {
   position: relative;
-  top: 65px;
+  top: 15%;
 }
 
 .radio-container {
@@ -113,7 +114,7 @@ label {
 }
 
 .selection-footer {
-  top: 134px;
+  top: 10px;
 }
 
 /* Game Page -------------------------- */
@@ -128,7 +129,7 @@ label {
 }
 
 .item-container {
-  height: 552px;
+  height: 95%;
   overflow-y: scroll;
   position: relative;
   -ms-overflow-style: none;
@@ -164,7 +165,7 @@ label {
 .selection-footer {
   width: 100%;
   height: 90px;
-  background: rgba(0, 0, 0, 1);
+  background: rgba(0, 0, 0, 0);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -274,9 +275,10 @@ button:active {
 /* Media Query: Large Smartphone (Vertical) */
 @media screen and (max-width: 500px) {
   .game-container {
-    width: 100%;
+    width: 95%;
     margin-top: 0;
     border: none;
+    padding: 10px;
   }
 
   .selected-item {
@@ -314,12 +316,6 @@ button:active {
   }
 }
 
-/* Media Query: iPhone */
-@media screen and (max-width: 376px) {
-  .best-score {
-    left: 232px;
-  }
-}
 /* Media Queries */
 @media screen and (max-width: 768px) {
     /* Styles for tablets and large smartphones */
@@ -336,30 +332,3 @@ button:active {
     /* Additional responsive adjustments */
 }
 
-@media screen and (max-width: 576px) {
-    /* Styles for small smartphones */
-    .header {
-        font-size: 18px;
-    }
-
-    .selection-container,
-    .item-container,
-    .score-container {
-        /* Adjust padding, font sizes, and layout */
-    }
-
-    .best-score,
-    .selection-footer,
-    .item-footer,
-    .score-footer {
-        /* Adjust position, size, and layout */
-    }
-
-    button {
-        /* Adjust size and font */
-    }
-
-    /* Other necessary adjustments for small screens */
-}
-
-/* Other necessary media queries and adjustments */
